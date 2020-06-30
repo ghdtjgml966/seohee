@@ -1,1 +1,37 @@
-ee
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>사이트의 제목넣기</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="keywords" content="키워드넣기" />
+    <meta name="description" content="설명넣기" />
+    <meta name="author" content="저자넣기" />
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+
+<body>
+    <div id="app">
+        {{message}}
+        <input type="text" v-model="message"/>
+    </div>
+    <script>
+        //뷰 인스턴스 생성자
+        //el data:뷰 인스턴스의 옵션 속성 method , create, template.
+        //template: 화면에 표시할 htmlm css들의 마크업 요소를 정의하는 속성 
+        //methods:화면 롯직 제어와 관계된 메서드를 정의(이벤트와 화면 동작과 관련돤 로직)
+        //created:뷰인스턴스가 생성되자 마자 실행할 로직을 정의할 수 잇는 속성
+        new Vue({
+            el: "#app",
+            data: {
+                message: "안녕하세요"
+            }
+        })
+
+    </script>
+</body>
+
+</html>
